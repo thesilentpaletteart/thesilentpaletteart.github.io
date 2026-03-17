@@ -1,7 +1,7 @@
 import type { SiteConfig } from '../types';
 
 export const siteConfig: SiteConfig = {
-  siteName: 'The Silent Palette',
+  siteName: 'The Silent Palette Art',
   tagline: 'Art That Speaks in Silence',
   footerTagline:
     'Where every brushstroke tells a story and every canvas whispers an emotion.',

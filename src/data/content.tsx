@@ -16,7 +16,7 @@ import { siteConfig } from './config';
 export const homeHero: HeroContent = {
   tagline: 'Art That Speaks in Silence',
   titleLine1: 'The Silent',
-  titleLine2: 'Palette',
+  titleLine2: 'Palette Art',
   description:
     'Where every brushstroke tells a story, every color whispers an emotion, and every canvas becomes a window to the soul.',
 };
@@ -58,7 +58,7 @@ export const homeCTA: CTAContent = {
 export const aboutHero: HeroContent = {
   tagline: 'About the Artist',
   titleLine1: 'The Story Behind',
-  titleLine2: 'The Silent Palette',
+  titleLine2: 'The Silent Palette Art',
   description: '',
 };
 

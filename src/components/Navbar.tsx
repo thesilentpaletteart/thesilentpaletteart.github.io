@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <Logo />
-          <span className="logo-text">The Silent Palette</span>
+          <span className="logo-text">The Silent Palette Art</span>
         </Link>
 
         <button

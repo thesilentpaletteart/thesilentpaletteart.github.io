@@ -54,14 +54,14 @@ const Portfolio: React.FC = () => {
 
   const getWhatsAppLink = (title: string): string => {
     const message = encodeURIComponent(
-      `Hi! I'm interested in purchasing "${title}" from The Silent Palette. Could you share more details?`
+      `Hi! I'm interested in purchasing "${title}" from The Silent Palette Art. Could you share more details?`
     );
     return `https://wa.me/${siteConfig.whatsappNumber}?text=${message}`;
   };
 
   const getEmailLink = (title: string): string => {
     const subject = encodeURIComponent(
-      `Inquiry about "${title}" — The Silent Palette`
+      `Inquiry about "${title}" — The Silent Palette Art`
     );
     const body = encodeURIComponent(
       `Hello,\n\nI'm interested in purchasing "${title}" from your collection. Could you please share more details including availability and shipping options?\n\nThank you!`
