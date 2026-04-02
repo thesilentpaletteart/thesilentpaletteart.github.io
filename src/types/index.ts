@@ -6,9 +6,11 @@ export interface SiteConfig {
   tagline: string;
   footerTagline: string;
   email: string;
-  whatsappNumber: string;
-  whatsappDisplay: string;
+  instagramUrl: string;
   studioInfo: string;
+  a4Price: number;
+  a5Price: number;
+  a6Price: number;
 }
 
 /* ===== Navigation ===== */
@@ -34,7 +36,7 @@ export interface Artwork {
   medium: string;
   size: string;
   price: string;
-  svg: ReactNode;
+  image: string;
 }
 
 export interface CategoryTab {
@@ -94,7 +96,6 @@ export interface SocialLink {
 
 export interface ContactFormData {
   name: string;
-  email: string;
   subject: string;
   message: string;
 }

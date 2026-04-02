@@ -5,17 +5,16 @@ import {
   contactDetails,
   socialLinks,
 } from '../data/content';
+import { siteConfig } from '../data/config';
 import type { ContactDetail, SocialLink, ContactFormData } from '../types';
 import '../styles/Contact.css';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
-    email: '',
     subject: '',
     message: '',
   });
-  const [submitted, setSubmitted] = useState<boolean>(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,9 +37,11 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    const subject = encodeURIComponent(formData.subject || 'Inquiry from The Silent Palette Art');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -92,24 +93,6 @@ const Contact: React.FC = () => {
                   </div>
                 ))}
               </div>
-
-              {/* Social Links */}
-              <div className="contact-social">
-                <span className="social-label">Follow Along</span>
-                <div className="social-links">
-                  {socialLinks.map((link: SocialLink) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={link.label}
-                    >
-                      {link.icon}
-                    </a>
-                  ))}
-                </div>
-              </div>
             </div>
 
             {/* Form Side */}
@@ -125,18 +108,6 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     placeholder="Your name"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="your@email.com"
                   />
                 </div>
                 <div className="form-group">
@@ -166,12 +137,6 @@ const Contact: React.FC = () => {
                 <button type="submit" className="btn btn-filled form-submit">
                   Send Message
                 </button>
-                {submitted && (
-                  <p className="form-success">
-                    ✓ Thank you! Your message has been sent. I&apos;ll get back to
-                    you soon.
-                  </p>
-                )}
               </form>
             </div>
           </div>

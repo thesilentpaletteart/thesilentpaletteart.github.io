@@ -105,12 +105,12 @@ const Home: React.FC = () => {
             {featuredWorks.map((work: Artwork, index: number) => (
               <Link
                 key={work.id}
-                to="/portfolio/category-1"
+                to="/portfolio/nature"
                 className="featured-card reveal"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="featured-image">
-                  {work.svg}
+                  <img src={work.image} alt={work.title} loading="lazy" />
                   <div className="featured-overlay">
                     <span className="featured-medium">{work.medium}</span>
                     <span className="featured-size">{work.size}</span>

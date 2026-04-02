@@ -102,13 +102,16 @@
   cursor: pointer;
 }
 
-.gallery-image svg {
+.gallery-image svg,
+.gallery-image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   transition: transform var(--transition-slow);
 }
 
-.gallery-card:hover .gallery-image svg {
+.gallery-card:hover .gallery-image svg,
+.gallery-card:hover .gallery-image img {
   transform: scale(1.05);
 }
 
@@ -188,15 +191,15 @@
   justify-content: center;
 }
 
-.whatsapp-btn {
-  background: #25d366;
+.instagram-btn {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   color: #fff;
 }
 
-.whatsapp-btn:hover {
-  background: #20bd5a;
+.instagram-btn:hover {
+  background: linear-gradient(45deg, #e08025, #d55a30, #c91f38, #b81e5b, #a8147a);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
 }
 
 .email-btn {
@@ -254,9 +257,11 @@
   border-radius: 4px;
 }
 
-.lightbox-image svg {
+.lightbox-image svg,
+.lightbox-image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .lightbox-info h2 {
@@ -300,17 +305,17 @@
   text-align: center;
 }
 
-.whatsapp-full {
-  background: #25d366;
-  border-color: #25d366;
+.instagram-full {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: #dc2743;
   color: #fff;
 }
 
-.whatsapp-full:hover {
-  background: #20bd5a;
+.instagram-full:hover {
+  background: linear-gradient(45deg, #e08025, #d55a30, #c91f38, #b81e5b, #a8147a);
 }
 
-.whatsapp-full::before {
+.instagram-full::before {
   display: none;
 }
 

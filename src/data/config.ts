@@ -5,8 +5,10 @@ export const siteConfig: SiteConfig = {
   tagline: 'Art That Speaks in Silence',
   footerTagline:
     'Where every brushstroke tells a story and every canvas whispers an emotion.',
-  email: 'artist@thesilentpalette.com',
-  whatsappNumber: '1234567890',
-  whatsappDisplay: '+1 (234) 567-890',
+  email: 'poojithananda08@gmail.com',
+  instagramUrl: 'https://instagram.com/thesilentpaletteart',
   studioInfo: 'Available by appointment',
+  a4Price: 6499,
+  a5Price: 3999,
+  a6Price: 1999,
 };

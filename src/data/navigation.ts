@@ -7,8 +7,9 @@ export const navItems: NavItem[] = [
     label: 'Portfolio',
     path: '/portfolio',
     children: [
-      { label: 'Category 1', path: '/portfolio/category-1' },
-      { label: 'Category 2', path: '/portfolio/category-2' },
+      { label: 'Nature & Greenery', path: '/portfolio/nature' },
+      { label: 'Seascapes & Horizons', path: '/portfolio/seascapes' },
+      { label: 'Warm Palette & Abstracts', path: '/portfolio/warm' },
     ],
   },
   { label: 'Contact', path: '/contact' },
@@ -17,8 +18,9 @@ export const navItems: NavItem[] = [
 export const footerNavLinks: FooterLink[] = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
-  { label: 'Category 1', path: '/portfolio/category-1' },
-  { label: 'Category 2', path: '/portfolio/category-2' },
+  { label: 'Nature & Greenery', path: '/portfolio/nature' },
+  { label: 'Seascapes & Horizons', path: '/portfolio/seascapes' },
+  { label: 'Warm Palette & Abstracts', path: '/portfolio/warm' },
   { label: 'Contact', path: '/contact' },
 ];
 
@@ -28,18 +30,8 @@ export const footerConnectLinks: FooterLink[] = [
     path: 'mailto:artist@thesilentpalette.com',
   },
   {
-    label: 'WhatsApp',
-    path: 'https://wa.me/1234567890',
-    isExternal: true,
-  },
-  {
     label: 'Instagram',
-    path: 'https://instagram.com',
-    isExternal: true,
-  },
-  {
-    label: 'Pinterest',
-    path: 'https://pinterest.com',
+    path: 'https://instagram.com/thesilentpaletteart',
     isExternal: true,
   },
 ];
